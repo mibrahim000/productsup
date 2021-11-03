@@ -4,6 +4,7 @@ namespace App\Commands;
 
 use App\FileHandler\FileHandlerFactory;
 use App\Sheets\SheetsFactory;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -16,6 +17,7 @@ class FileConverterCommand extends Command
     public function __construct(
         protected FileHandlerFactory $fileHandler,
         protected SheetsFactory $sheetsFactory,
+        protected LoggerInterface $logger,
     )
     {
         parent::__construct(null);
@@ -46,7 +48,7 @@ class FileConverterCommand extends Command
 
             return Command::SUCCESS;
         } catch (\Exception $e) {
-            $output->writeln("Error: {$e->getMessage()}", self::FAILURE);
+            $this->logger->error("Error: {$e->getMessage()}");
             return Command::FAILURE;
         }
     }
