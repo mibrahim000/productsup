@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  php:
+    container_name: php
+    build:
+      context: ./docker/php
+    ports:
+      - '9000:9000'
+    volumes:
+      - .:/var/www/symfony_docker
