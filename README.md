@@ -69,11 +69,11 @@ The program is a cli tool that gives you the ability to process a data from loca
  php bin/console file-converter <file> [<destination> [<remote>]]
 ```
 
-| Parameter   | Description                                       | Required | Default      | Value            | Datatype |
-|-------------|---------------------------------------------------|----------|--------------|------------------|----------|
-| file        | The path /url to the file.                        |    Yes   |       -      |                  |  string  |
-| destination | The destination where to push the processed data. |    No    | google_sheet |  - google_sheet  |  string  |
-| remote      | The type of file location remote / local          |    No    |     local    | - remote - value |  string  |
+| Parameter   | Description                                       | Required | Default      | Value            | Data type |
+|-------------|---------------------------------------------------|----------|--------------|------------------|-----------|
+| file        | The path /url to the file.                        |    Yes   |      -       |        -         |   string  |
+| destination | The destination where to push the processed data. |    No    | google_sheet |  - google_sheet  |   string  |
+| remote      | The type of file location remote / local          |    No    |     local    | - remote - value |   string  |
 
 ## Google Cloud Token
 google cloud needs a `token` so that it can push the date to spreed sheet. the program is automatically generate and save it to a local file called `token.json` at the app main root path.
