@@ -25,9 +25,9 @@ class FileConverterCommand extends Command
 
     protected function configure(): void
     {
-        $this->addArgument('file', InputArgument::REQUIRED, 'The path to the file.');
-        $this->addArgument('destination', InputArgument::OPTIONAL, 'Where to upload file.', 'google_sheet');
-        $this->addArgument('remote', InputArgument::OPTIONAL, 'The type to the file remote.', 'local');
+        $this->addArgument('file', InputArgument::REQUIRED, 'The path/url to the file.');
+        $this->addArgument('destination', InputArgument::OPTIONAL, 'The destination where to push the processed data..', 'google_sheet');
+        $this->addArgument('remote', InputArgument::OPTIONAL, 'The type of file location remote / local.', 'local');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
