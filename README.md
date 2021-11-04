@@ -17,6 +17,7 @@ The program uses the below stack so make sure that your machine is using it.
 # Installation
 - [PHP](#php)
 - [Docker](#Docker)
+- [Setup Google Cloud Platform token](#setup-google-cloud-platform-token)
 
 # Usage
 - [Usage](#to-begin-use-the-program)
